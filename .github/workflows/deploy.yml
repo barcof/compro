@@ -24,7 +24,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: ${{ max(steps.detect-package-manager.outputs.manager, 'npm') }} # Caches dependencies for faster builds
+          cache: "npm" # Caches dependencies for faster builds
 
       - name: Install dependencies
         run: npm ci
