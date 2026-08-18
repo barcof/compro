@@ -10,8 +10,8 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "BigSpring - Professional Company Profile",
-  description: "A modern company profile website built with Next.js and Tailwind CSS.",
+  title: "Gapura Kencana - Quick Action and Best Quality",
+  description: `Kami bergerak dalam bidang spesialis Rekondisi Mechanical Seal dengan berbagai merk dan memproduksi produk suku cadang lainnya. Kami juga menerima pekerjaan : Hard Lining Rubber, Metal Spray, Ceramic Coating, Hard Chrome, Stellite, Buffing, dll.`,
 };
 
 export default function RootLayout({
@@ -20,11 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${lato.variable} h-full antialiased`}
-    >
-      <body className={`${lato.className} min-h-full flex flex-col`}>{children}</body>
+    <html lang="en" className={`${lato.variable} h-full antialiased`}>
+      <body className={`${lato.className} min-h-full flex flex-col`}>
+        {children}
+      </body>
     </html>
   );
 }
