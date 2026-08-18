@@ -19,7 +19,7 @@ const Section = ({ children, className, id, background = 'white' }: SectionProps
     <section 
       id={id} 
       className={cn(
-        'py-20 px-4 md:py-28',
+        'py-20 px-4 md:py-36',
         bgStyles[background],
         className
       )}
