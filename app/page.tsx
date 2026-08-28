@@ -8,8 +8,8 @@ import Certifications from "@/components/Certifications";
 import Customers from "@/components/Customers";
 import Maps from "@/components/Maps";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import Section from "@/components/Section";
+// import { Button } from "@/components/ui/button";
+// import Section from "@/components/Section";
 
 export default function Home() {
   return (
@@ -17,7 +17,6 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
-        <Customers />
         <About />
         <VisiMisi />
         <Products />
@@ -25,7 +24,7 @@ export default function Home() {
         <Certifications />
         
         {/* CTA Section */}
-        <Section background="navy" className="text-center">
+        {/* <Section background="navy" className="text-center">
           <div className="max-w-3xl mx-auto space-y-8">
             <h2 className="text-3xl font-bold text-white md:text-5xl">
               Ready to take your business to the next level?
@@ -43,8 +42,9 @@ export default function Home() {
               </Button>
             </div>
           </div>
-        </Section>
+        </Section> */}
 
+        <Customers />
         <Maps />
       </main>
       <Footer />

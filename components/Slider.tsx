@@ -33,12 +33,6 @@ export default function Slider({ products }: { products?: ProductItem[] }) {
 
   const items = products && products.length ? products : defaultProducts;
 
-  const imageStyle = {
-    borderRadius: "5%",
-    width: "400px",
-    height: "350px",
-  };
-
   return (
     <div className="container mx-auto">
       <Swiper
@@ -67,7 +61,11 @@ export default function Slider({ products }: { products?: ProductItem[] }) {
               width={1024}
               height={1024}
               loading="eager"
-              style={imageStyle}
+              style={{
+                borderRadius: "5%",
+                width: "400px",
+                height: "350px",
+              }}
             />
             <Marker variant="separator">
               <MarkerContent className="text-lg font-bold p-5 text-muted-foreground">

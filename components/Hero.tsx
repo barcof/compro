@@ -1,43 +1,89 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import Image from 'next/image';
+"use client";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-background py-20 md:py-32">
-      <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 lg:grid-cols-2">
-        <div className="flex flex-col space-y-8 text-center lg:text-left">
-          <h1 className="text-4xl font-bold tracking-tight text-primary md:text-6xl">
-            Design your future <br /> with <span className="text-accent">BigSpring</span>
+    <section
+      id="home"
+      className="relative overflow-hidden bg-background min-h-screen"
+    >
+      {/* <div className="relative aspect-video flex h-svh w-full items-center justify-center overflow-hidden"> */}
+      <div className="relative h-screen w-full overflow-hidden flex items-center justify-center">
+        <video
+          preload="auto"
+          autoPlay
+          muted
+          playsInline
+          loop
+          // className="absolute top-0 transform inset-0 w-screen h-screen object-cover z-0"
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source src="/uploads/hero_video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* <div className="z-20 font-bold text-center text-accent p-5 gap-2 lg:gap-4 flex flex-col">
+          <h1 className="text-6xl">QUICK ACTION</h1>
+          <h1 className="text-6xl">BEST QUALITY</h1>
+        </div> */}
+
+        <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10" />
+
+        <div className="relative z-20 text-center text-white px-4 max-w-4xl mx-auto space-y-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
+            Quick Action and Best Quality
           </h1>
-          <p className="mx-auto max-w-lg text-lg text-muted-foreground lg:mx-0">
-            Professional company profile template built with Next.js and Tailwind CSS. 
-            Clean design, powerful features, and easy to customize.
-          </p>
-          <div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
-            <Button size="lg" className="bg-primary text-primary-foreground h-12 px-8">
-              Download Now
-            </Button>
-            <Button size="lg" variant="outline" className="border-primary text-primary h-12 px-8">
-              Learn More
-            </Button>
-          </div>
-        </div>
-        <div className="relative mx-auto w-full max-w-2xl lg:ml-auto">
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-secondary shadow-2xl">
-            <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-              {/* Placeholder for Hero Image */}
-              <div className="text-center">
-                <div className="mb-4 text-6xl font-bold opacity-10">Hero Image</div>
-                <div className="h-1 bg-accent w-24 mx-auto rounded-full"></div>
-              </div>
-            </div>
-          </div>
-          {/* Decorative elements */}
-          <div className="absolute -bottom-6 -right-6 -z-10 h-64 w-64 rounded-full bg-accent/10 blur-3xl"></div>
-          <div className="absolute -left-6 -top-6 -z-10 h-64 w-64 rounded-full bg-primary/10 blur-3xl"></div>
+          <TypeAnimation
+            sequence={[
+              'Kualitas bukanlah kata tanpa makna',
+              100,
+              'Kualitas bukanlah kata tanpa makna, melainkan harmonisasi dari kreatifitas',
+              100,
+              'Kualitas bukanlah kata tanpa makna, melainkan harmonisasi dari kreatifitas, idealisme',
+              100,
+              'Kualitas bukanlah kata tanpa makna, melainkan harmonisasi dari kreatifitas, idealisme, kesungguhan',
+              100,
+              'Kualitas bukanlah kata tanpa makna, melainkan harmonisasi dari kreatifitas, idealisme, kesungguhan, kerja keras',
+              100,
+              'Kualitas bukanlah kata tanpa makna, melainkan harmonisasi dari kreatifitas, idealisme, kesungguhan, kerja keras, kebersamaan',
+              100,
+              'Kualitas bukanlah kata tanpa makna, melainkan harmonisasi dari kreatifitas, idealisme, kesungguhan, kerja keras, kebersamaan dan do’a.',
+              10000,
+              '',
+              100
+            ]}
+            speed={50}
+            wrapper="p"
+            cursor={false}
+            repeat={Infinity}
+            // style={{ fontSize: "2em", display: "inline-block" }}
+            className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-2xl mx-auto"
+          />
+          {/* <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
+            Kualitas bukanlah kata tanpa makna, melainkan harmonisasi dari
+            kreatifitas, idealisme, kesungguhan, kerja keras, kebersamaan, dan
+            do’a.
+          </p> */}
         </div>
       </div>
+      {/* <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4">
+        <div className="flex flex-col z-10 mx-auto">
+          <div className="relative font-bold tracking-tight flex flex-col gap-4 text-6xl text-left text-accent mx-auto lg:text-6xl">
+            <span>Quick Action and Best Quality</span>
+          </div>
+        </div>
+        <video
+          preload="auto"
+          autoPlay
+          muted
+          playsInline
+          loop
+          className="absolute top-0 transform inset-0 w-screen h-screen object-cover z-0"
+        >
+          <source src="/uploads/hero_video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div> */}
     </section>
   );
 };

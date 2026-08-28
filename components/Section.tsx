@@ -6,9 +6,10 @@ interface SectionProps {
   className?: string;
   id?: string;
   background?: 'white' | 'gray' | 'navy';
+  style?: React.CSSProperties;
 }
 
-const Section = ({ children, className, id, background = 'white' }: SectionProps) => {
+const Section = ({ children, className, id, background = 'white', style }: SectionProps) => {
   const bgStyles = {
     white: 'bg-background text-foreground',
     gray: 'bg-secondary text-foreground',
@@ -17,9 +18,10 @@ const Section = ({ children, className, id, background = 'white' }: SectionProps
 
   return (
     <section 
-      id={id} 
+      id={id}
+      style={style}
       className={cn(
-        'py-20 px-4 md:py-36',
+        'py-10 px-4 lg:py-36',
         bgStyles[background],
         className
       )}
