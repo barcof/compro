@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+import ScrollToTop from '@/components/ScrollToTop';
 
 const lato = Lato({
   weight: ["400", "700"],
@@ -8,6 +10,13 @@ const lato = Lato({
   variable: "--font-lato",
   display: "swap",
 });
+
+const vendSans = localFont({
+  src: './vend-sans-v1-latin-regular.woff2',
+  display: 'swap',
+  variable: "--font-vend-sans",
+})
+
 
 export const metadata: Metadata = {
   title: "Gapura Kencana - Quick Action and Best Quality",
@@ -20,9 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${lato.variable} h-full antialiased`}>
-      <body className={`${lato.className} min-h-full flex flex-col`}>
+    <html lang="en" className={`${vendSans.variable} h-full antialiased`}>
+      <body className={`${vendSans.className} min-h-full flex flex-col`}>
         {children}
+        <ScrollToTop />
       </body>
     </html>
   );
