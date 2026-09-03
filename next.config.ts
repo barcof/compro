@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Diwajibkan untuk export statis jika menggunakan komponen <Image> Next.js
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/compro' : '',
+  trailingSlash: true,
 };
 
 export default nextConfig;

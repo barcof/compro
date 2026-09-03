@@ -1,0 +1,3 @@
+import type {Metadata} from "next"; import LocalizedLayout from "@/components/LocalizedLayout"; import ServicePage,{ServiceJsonLd,FaqJsonLd} from "@/components/ServicePage";
+export const metadata:Metadata={title:"Mechanical Seal Service & Reconditioning",description:"Mechanical Seal service and reconditioning, Metal & Repair, Pump Repair, spare parts and material supply by PT Gapura Kencana.",alternates:{canonical:"/en/services/",languages:{id:"/services/",en:"/en/services/"}}};
+export default function Page(){return <LocalizedLayout lang="en" path="/en/services/"><ServicePage lang="en"/><ServiceJsonLd lang="en"/><FaqJsonLd lang="en"/></LocalizedLayout>}

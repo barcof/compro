@@ -15,18 +15,18 @@ type ProductItem = { title: string; image: string; category: string };
 export default function Slider({ products }: { products?: ProductItem[] }) {
   const defaultProducts: ProductItem[] = [
     {
-      title: "Rubber Bellows Seal",
-      image: "rubber-bellows-seal.jpg",
+      title: "Cartridge Seal",
+      image: "cartridge-seal.jpg",
       category: "products",
     },
     {
-      title: "Disk Coupling",
-      image: "disk-coupling.jpg",
+      title: "Agigator Seal",
+      image: "agigator-seal.jpg",
       category: "products",
     },
     {
-      title: "Roundbar Material",
-      image: "roundbar-material.jpg",
+      title: "Pusher Seal",
+      image: "pusher-seal.jpg",
       category: "products",
     },
   ];

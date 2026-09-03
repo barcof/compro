@@ -21,7 +21,7 @@ const Section = ({ children, className, id, background = 'white', style }: Secti
       id={id}
       style={style}
       className={cn(
-        'py-10 px-4 lg:py-36',
+        'py-10 px-4 lg:py-16',
         bgStyles[background],
         className
       )}

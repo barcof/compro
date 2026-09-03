@@ -1,0 +1,3 @@
+import type {Metadata} from "next"; import LocalizedLayout from "@/components/LocalizedLayout"; import About from "@/components/About"; import VisiMisi from "@/components/VisiMisi"; import Certifications from "@/components/Certifications";
+export const metadata:Metadata={title:"Tentang PT Gapura Kencana",description:"Profil PT Gapura Kencana, perusahaan yang bergerak dalam rekondisi Mechanical Seal dan produk suku cadang lainnya.",alternates:{canonical:"/about/",languages:{id:"/about/",en:"/en/about/"}}};
+export default function Page(){return <LocalizedLayout lang="id" path="/about/"><About lang="id"/><VisiMisi lang="id"/><Certifications lang="id"/></LocalizedLayout>}
